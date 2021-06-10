@@ -1,7 +1,11 @@
 import React, { FunctionComponent } from 'react'
 
 // styles
-import { StyledButton } from './Button.styled';
+import { 
+    StyledButton,
+    StyledStartIcon,
+    StyledEndIcon
+ } from './Button.styled';
 
 type ButtonProps = {
     title?: string;
@@ -13,18 +17,18 @@ type ButtonProps = {
 }
 
 const Button: FunctionComponent<ButtonProps> = ({
-    title = "titulo",
-    startIcon = "",
-    endIcon = "",
+    title,
+    startIcon,
+    endIcon,
     className = "py-4",
     variant = "primary",
     onClick = () => { }
 }) => {
     return (
         <StyledButton variant={variant} onClick={onClick}>
-            {startIcon && <img className="w-6 h-6" src={startIcon} alt="icono" />}
+            {startIcon && <StyledStartIcon imgSrc={startIcon} imgAlt="icono" />}
             {title}
-            {startIcon && <img className="w-6 h-6" src={endIcon} alt="icono" />}
+            {endIcon && <StyledEndIcon imgSrc={endIcon} imgAlt="icono" />}
         </StyledButton>
     )
 }

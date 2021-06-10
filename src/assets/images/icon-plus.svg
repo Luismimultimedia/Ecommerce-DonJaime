@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-icon-plus">
+      <rect width="30" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="icon-plus" clip-path="url(#clip-icon-plus)">
+    <g id="Grupo_47" data-name="Grupo 47" transform="translate(-3955 -1962)">
+      <rect id="Rectángulo_34" data-name="Rectángulo 34" width="3" height="17" rx="1.5" transform="translate(3969 1969)" fill="red"/>
+      <rect id="Rectángulo_35" data-name="Rectángulo 35" width="3" height="17" rx="1.5" transform="translate(3962 1979) rotate(-90)" fill="red"/>
+    </g>
+  </g>
+</svg>

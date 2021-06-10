@@ -31,6 +31,9 @@ export const StyledTypography = styled.p.attrs({
       case "buttonCard":
         return tw`text-base text-white`;
 
+      case "titleProductCard":
+        return tw`text-base text-primary-500 font-bold`;
+
       default:
         break;
     }

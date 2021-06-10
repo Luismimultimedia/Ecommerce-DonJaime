@@ -7,11 +7,13 @@ type TypographyProps = {
 }
 
 const Typography: FunctionComponent<TypographyProps> = ({
-    text= "",
-    variant= "title"
+    text = "",
+    variant = "title",
 }) => {
     return (
-        <StyledTypography variant={variant}>{text}</StyledTypography>
+        <StyledTypography variant={variant}>
+            {text}
+        </StyledTypography>
     )
 }
 
