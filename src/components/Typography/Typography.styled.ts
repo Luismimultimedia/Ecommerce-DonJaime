@@ -3,11 +3,13 @@ import tw from "twin.macro";
 
 type StyledTypographyProps = {
   variant: string;
+  className: string;
 };
 
-export const StyledTypography = styled.p.attrs({
-  className: "StyledTypography ",
+export const StyledTypography = styled.p.attrs<StyledTypographyProps>({
+  className: `StyledTypography ${(props: StyledTypographyProps) => props.className}`,
 })`
+
   ${(props: StyledTypographyProps) => {
     switch (props.variant) {
       case "titleSection":

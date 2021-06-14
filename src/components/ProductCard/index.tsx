@@ -1,8 +1,17 @@
 import { title } from 'process'
 import React, { FC } from 'react'
-import Image from '../Image'
+
+// styled
+import {
+    StyledProductCard,
+    StyledImageProductCard,
+    StyledContainerInfo,
+    StyledTitleProduct,
+    StyledDescriptionProduct,
+    StyledPriceProduct,
+} from "./ProductCard.styled"
+
 import ProductQuantity from '../ProductQuantity'
-import Typography from '../Typography'
 
 type ProductCardProps = {
     variant: string;
@@ -28,32 +37,34 @@ const ProductCard: FC<ProductCardProps> = ({
     onSubstract,
 }) => {
     return (
-        <div className="flex flex-col items-center justify-center w-60 p-4 shadow space-y-4 rounded-lg">
-            <Image
+        <StyledProductCard variant="lg">
+            <StyledImageProductCard
                 imgSrc={img}
                 imgAlt="Imagen del producto"
             />
-            <div className="flex flex-col">
-                <Typography
+            <StyledContainerInfo>
+                <StyledTitleProduct
                     variant="titleCard"
                     text={title}
                 />
-                <Typography
+                <StyledDescriptionProduct
                     variant="descriptionCard"
                     text={description}
                 />
-                <Typography
-                    variant="priceCard"
-                    text={price}
-                />
-            </div>
-            <ProductQuantity
-                value={quantity}
-                measure={measure}
-                onAdd={onAdd}
-                onSubstract={onSubstract}
-            />
-        </div>
+                <div className="flex flex-row space-x-10 items-center md:flex-col md:space-x-0 md:items-start">
+                    <StyledPriceProduct
+                        variant="priceCard"
+                        text={price}
+                    />
+                    <ProductQuantity
+                        value={quantity}
+                        measure={measure}
+                        onAdd={onAdd}
+                        onSubstract={onSubstract}
+                    />
+                </div>
+            </StyledContainerInfo>
+        </StyledProductCard>
     )
 }
 

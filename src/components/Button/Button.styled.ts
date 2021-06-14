@@ -12,7 +12,7 @@ type StyledButtonProps = {
 export const StyledButton = styled.button.attrs({
   className: "StyledButton ",
 })`
-  ${tw`w-full flex p-4 rounded-xl justify-center items-center focus:outline-none`}
+  ${tw`w-full flex p-4 rounded-xl justify-center items-center focus:outline-none text-base`}
 
   -webkit-appearance: none;
   -moz-appearance: none;

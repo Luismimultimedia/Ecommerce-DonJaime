@@ -23,26 +23,38 @@ const ProductQuantity: FC<ProductQuantityProps> = ({
 }) => {
     return (
         <div className="flex items-center justify-between w-full">
-            <Button
-                variant={"iconButton"}
-                endIcon={iconSubstract}
-                onClick={onSubstract}
-            />
-            <div className="flex items-center space-x-2">
-                <Typography
-                    variant={"titleProductCard"}
-                    text={value.toString()}
-                />
-                <Typography
-                    variant={"titleProductCard"}
-                    text={` ${measure}`}
-                />
-            </div>
-            <Button
-                variant={"iconButton"}
-                startIcon={iconPlus}
-                onClick={onAdd}
-            />
+            {value > 0 ?
+                (
+                    <>
+                        <Button
+                            variant={"iconButton"}
+                            endIcon={iconSubstract}
+                            onClick={onSubstract}
+                        />
+                        <div className="flex items-center space-x-2">
+                            <Typography
+                                variant={"titleProductCard"}
+                                text={value.toString()}
+                            />
+                            <Typography
+                                variant={"titleProductCard"}
+                                text={` ${measure}`}
+                            />
+                        </div>
+                        <Button
+                            variant={"iconButton"}
+                            startIcon={iconPlus}
+                            onClick={onAdd}
+                        />
+                    </>
+                )
+                :
+                (<Button
+                    variant={"primary"}
+                    title={"Agregar"}
+                    onClick={onAdd}
+                />)}
+
         </div>
     )
 }
