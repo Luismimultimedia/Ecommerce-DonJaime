@@ -3,11 +3,10 @@ import tw from "twin.macro";
 
 type StyledTypographyProps = {
   variant: string;
-  className: string;
 };
 
 export const StyledTypography = styled.p.attrs<StyledTypographyProps>({
-  className: `StyledTypography ${(props: StyledTypographyProps) => props.className}`,
+  className: `StyledTypography`,
 })`
 
   ${(props: StyledTypographyProps) => {
