@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-shoppingcar">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="shoppingcar" clip-path="url(#clip-shoppingcar)">
+    <g id="shopping_cart-24px" transform="translate(1 1)">
+      <path id="Trazado_7" data-name="Trazado 7" d="M0,0H21.35V21.35H0Z" fill="none"/>
+      <path id="Trazado_8" data-name="Trazado 8" d="M14.72,12.373a1.877,1.877,0,0,0,1.65-.971l3.376-6.12a.939.939,0,0,0-.82-1.4H4.97L4.083,2H1V3.886H2.886L6.28,11.044l-1.273,2.3a1.889,1.889,0,0,0,1.65,2.8H17.973V14.26H6.658l1.037-1.886Zm-8.854-6.6H17.322l-2.6,4.715H8.1Zm.792,11.317a1.886,1.886,0,1,0,1.886,1.886A1.883,1.883,0,0,0,6.658,17.089Zm9.429,0a1.886,1.886,0,1,0,1.886,1.886A1.883,1.883,0,0,0,16.087,17.089Z" transform="translate(-0.378 -0.755)" fill="red"/>
+    </g>
+  </g>
+</svg>

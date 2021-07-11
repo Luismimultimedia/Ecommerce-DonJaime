@@ -17,3 +17,7 @@ export * from "./ProductQuantity";
 // ProductCard
 export { default as ProductCard } from "./ProductCard";
 export * from "./ProductCard";
+
+// Header
+export { default as Header } from "./Header";
+export * from "./Header";

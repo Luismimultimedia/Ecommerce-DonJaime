@@ -7,6 +7,7 @@ import Image from "../Image";
 type StyledButtonProps = {
   variant: string;
   className: string;
+  size?: string;
 };
 
 export const StyledButton = styled.button.attrs({
@@ -28,6 +29,16 @@ export const StyledButton = styled.button.attrs({
 
       case "iconButton":
         return tw`bg-white hover:bg-gray-100 focus:bg-white shadow text-primary-500 w-12 h-12`;
+
+      default:
+        break;
+    }
+  }}
+
+  ${(props: StyledButtonProps) => {
+    switch (props.size) {
+      case "sm":
+        return tw`w-auto`
 
       default:
         break;
