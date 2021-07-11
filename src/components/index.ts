@@ -21,3 +21,11 @@ export * from "./ProductCard";
 // Header
 export { default as Header } from "./Header";
 export * from "./Header";
+
+// Tabs
+export { default as Tabs } from "./Tabs";
+export * from "./Tabs";
+
+// Badge
+export { default as Badge } from "./Badge";
+export * from "./Badge";

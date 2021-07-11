@@ -8,6 +8,7 @@ import { itemType } from '../../types/itemsMenu.type'
 
 // Styles
 import logo from "../../assets/images/logo.svg"
+import shoppingcar from "../../assets/images/shoppingcar.svg"
 
 type EcommerceLayoutProps = {
     children: ReactNode
@@ -15,7 +16,7 @@ type EcommerceLayoutProps = {
 
 const EcommerceLayout: FC<EcommerceLayoutProps> = () => {
 
-    const [items, setItems] = useState<Array<itemType>>([
+    const [items] = useState<Array<itemType>>([
         {
             label: "Inicio",
             to: "/"
@@ -36,6 +37,8 @@ const EcommerceLayout: FC<EcommerceLayoutProps> = () => {
             <Header
                 logo={logo}
                 itemsMenu={items}
+                iconCarShop={shoppingcar}
+                itemCar="0"
             />
         </section>
     )

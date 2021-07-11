@@ -1,5 +1,8 @@
 import React, { FunctionComponent } from 'react'
 
+// Components
+import Badge from '../Badge';
+
 // styles
 import { 
     StyledButton,
@@ -14,6 +17,9 @@ type ButtonProps = {
     className?: string;
     variant?: string;
     size?: string;
+    badge?: boolean;
+    badgeValue?: string;
+    badgeColor?: string;
     onClick: () => void;
 }
 
@@ -24,6 +30,9 @@ const Button: FunctionComponent<ButtonProps> = ({
     className = "py-4",
     variant = "primary",
     size,
+    badge = false,
+    badgeValue,
+    badgeColor,
     onClick = () => { }
 }) => {
     return (
@@ -31,6 +40,7 @@ const Button: FunctionComponent<ButtonProps> = ({
             {startIcon && <StyledStartIcon imgSrc={startIcon} imgAlt="icono" />}
             {title}
             {endIcon && <StyledEndIcon imgSrc={endIcon} imgAlt="icono" />}
+            {badge && <Badge badgeValue={badgeValue} badgeColor={badgeColor} />}
         </StyledButton>
     )
 }

@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import shoppingcar from "../../assets/images/shoppingcar.svg"
 
 // Components
 import Image from "../Image"
@@ -20,11 +19,15 @@ import Button from '../Button'
 type HeaderProps = {
     logo: string;
     itemsMenu: itemType[];
+    iconCarShop: string;
+    itemCar: string;
 }
 
 const Header: FC<HeaderProps> = ({
     logo,
-    itemsMenu
+    iconCarShop,
+    itemsMenu,
+    itemCar,
 }) => {
     return (
         <NavStyled>
@@ -39,7 +42,15 @@ const Header: FC<HeaderProps> = ({
                                 <Tabs key={key} item={item} />
                             ))
                         }
-                        <Button size={"sm"} onClick={() => {}} variant="secondary" startIcon={shoppingcar} />
+                        <Button
+                            size={"sm"}
+                            onClick={() => { }}
+                            variant="secondary"
+                            startIcon={iconCarShop}
+                            badge={true}
+                            badgeValue={itemCar}
+                            badgeColor="var(--color-primary-500)"
+                        />
                     </UlContainerStyled>
                 }
             </ItemsContainerStyled>
